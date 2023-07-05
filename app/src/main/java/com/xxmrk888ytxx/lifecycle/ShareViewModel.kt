@@ -30,7 +30,7 @@ class ShareViewModel : ViewModel() {
             userLeaveTime?.let {
                 val timeInOutApp = System.currentTimeMillis() - it
 
-                updateCount((timeInOutApp / 60_000L).toInt())
+                updateCount(-((timeInOutApp / 60_000L).toInt() * 2))
                 userLeaveTime = null
             }
         }
